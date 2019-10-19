@@ -1,17 +1,9 @@
-FROM alpine as Source
-
-#RUN apk update && \
-#		apk add git
-		
-#RUN git clone --depth=1 https://github.com/jacopoMauro/website.git /git
-
-########
-
-FROM debian:10-slim
+FROM debian:10-slim as Source
 
 ENV HUGO_VERSION='0.58.3'
 ENV HUGO_NAME="hugo_extended_${HUGO_VERSION}_Linux-64bit"
 ENV HUGO_URL="https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/${HUGO_NAME}.tar.gz"
+
 ENV BUILD_DEPS="wget"
 WORKDIR /hugo
 RUN apt-get update && \
@@ -22,11 +14,16 @@ RUN apt-get update && \
     wget "${HUGO_URL}" && \
     tar -zxvf "${HUGO_NAME}.tar.gz" && \
     mv ./hugo /usr/bin/hugo && \
-    apt-get remove -y ${BUILD_DEPS} && \
-    apt-get autoremove -y && \
-    rm -rf /var/lib/apt/lists/* && \
-    cd / && \
-    rm -rf /hugo
+    git clone --depth=1 https://github.com/jacopoMauro/website.git /src && \
+    # try to test if the site can be build
+    hugo 
+
+########
+
+FROM debian:10-slim
+
+COPY --from=Source /src /src
+COPY --from=Source /usr/bin/hugo /usr/bin/hugo
 WORKDIR /src
 
 EXPOSE 1313
