@@ -3,20 +3,20 @@
 date = 2017-06-30
 
 # Project title.
-title = "SIRIUS"
+title = "PRIN9M932N"
 
 # Project summary to display on homepage.
-summary = "Norwegian Centre for Research-driven Innovation in the oil & gas industry."
+summary = "Innovative and multi-disciplinary approaches for constraint and preference reasoning- Italian PRIN Project."
 
 # Optional image to display on homepage (relative to `static/img/` folder).
 image_preview = ""
 
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
-tags = [ "old" ]
+tags = ["old"]
 
 # Optional external URL for project (replaces project detail page).
-external_link = "http://sirius-labs.no/"
+external_link = "http://www.dmi.unipg.it/bista/projects/prin2008/"
 
 # Does the project detail page use math formatting?
 math = false
@@ -28,10 +28,6 @@ caption = "My caption :smile:"
 
 +++
 
-Joint research group between a consortium of leading industrial organizations
-across the oil & gas value chain, including operators (Statoil), service
-companies (Schlumberger, DNV-GL) and IT companies (Computas, Evry, IBM,
-Numascale), and researchers from the University of Oslo, NTNU, University
-of Oxford and Simula.
+Funded by the Italian MIUR PRIN Programme.
 
-Position: researcher, optimization and formal methods expert.
+Position: researcher.

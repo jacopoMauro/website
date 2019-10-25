@@ -1,5 +1,7 @@
 # Jacopo Mauro website
 
+This repository contains the sources to statically build the website.
+
 To run the website locally run
 ```
 docker run --rm -it \
@@ -17,11 +19,5 @@ cd <MY_WEBSITE_FOLDER>
 academic import --bibtex mybib.bib --normalize
 ```
 
-
-
-
-## Ecosystem
-
-* **[Academic Admin](https://github.com/sourcethemes/academic-admin):** An admin tool to import publications from BibTeX or import assets for an offline site
-
-
+After this tool is run to remove the additional proceeding run the script
+/my_scripts/remove_proceedings.sh

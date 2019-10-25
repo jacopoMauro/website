@@ -6,7 +6,7 @@ date = 2017-06-30
 title = "Hyvar"
 
 # Project summary to display on homepage.
-summary = "Scalable Hybrid Variability for Distributed, Evolving Software Systems."
+summary = "Scalable Hybrid Variability for Distributed, Evolving Software Systems - European H2020 Project."
 
 # Optional image to display on homepage (relative to `static/img/` folder).
 # image_preview = "bubbles.jpg"

@@ -6,7 +6,7 @@ date = 2017-06-30
 title = "AEOLUS"
 
 # Project summary to display on homepage.
-summary = "Mastering Cloud Complexity."
+summary = "Mastering Cloud Complexity - French ANR Project."
 
 # Optional image to display on homepage (relative to `static/img/` folder).
 # image_preview = "bubbles.jpg"

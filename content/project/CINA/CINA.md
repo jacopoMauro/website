@@ -6,7 +6,7 @@ date = 2017-06-30
 title = "CINA"
 
 # Project summary to display on homepage.
-summary = "Compositionality, Interaction, Negotiation, Autonomicity for the future ICT society."
+summary = "Compositionality, Interaction, Negotiation, Autonomicity for the future ICT society - Italian PRIN Project."
 
 # Optional image to display on homepage (relative to `static/img/` folder).
 # image_preview = "bubbles.jpg"
