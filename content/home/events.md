@@ -13,7 +13,7 @@ widget = "custom"
 weight = 65
 
 +++
-* [SEFM](https://event.cwi.nl/sefm2020/) (2019)
+* [SEFM](https://event.cwi.nl/sefm2020/) (2020)
 * [iFM PhD Symposium](https://ifm2019.hvl.no/phd-symposium/) (2019)
 * [Cybersecurity Days](https://cyberdays2019.sdu.dk/) (2019)
 * [MiDOS track at ACM SAC](https://midos2019.sdu.dk/) (2019)
