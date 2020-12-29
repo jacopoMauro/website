@@ -66,6 +66,8 @@ subtitle = ""
  css_class = ""
 +++
 
+I believe that all scientific publications should be freely available to the general public, especially considering that researchers and peer-reviewers are largely supported by public funding. If there is a paper of mine you would like to read but do not have access to, please write me and I will be happy to share it with you.
+
 <!--
 {{% alert note %}}
 Quickly discover relevant content by [filtering publications]({{< ref "/publication/_index.md" >}}).
