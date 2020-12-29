@@ -6,7 +6,7 @@ tags:
 date: "2020-01-01T00:00:00Z"
 
 # Optional external URL for project (replaces project detail page).
-external_link: ""
+external_link: "https://portal.findresearcher.sdu.dk/en/projects/uddannelses-og-forskningsministeriet-international-network-progra"
 
 #image:
 #  caption: Photo by rawpixel on Unsplash

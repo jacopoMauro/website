@@ -24,11 +24,19 @@ design:
   #  color: 'navy'
   #  text_color_light: true
 ---
-Currently given courses:
+**Currently courses**
 * [Programming Languages](https://github.com/jacopoMauro/dm552),
    University of Southern Denmark - 2021
 * [Microservices & DevOps](https://github.com/jacopoMauro/dm874),
    University of Southern Denmark - 2020
+
+**Topics available for Master Thesis**
+* Dev(Sec)Ops & Cloud Computing
+* Optimization
+* Algorithm Selection
+* Constraint based AI Explanation
+* Formal Methods
+* Choreographic programming
 
 
 <!--  

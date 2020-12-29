@@ -6,7 +6,7 @@ tags:
 date: "2020-01-01T00:00:00Z"
 
 # Optional external URL for project (replaces project detail page).
-external_link: ""
+external_link: "https://ascd.dk/"
 
 #image:
 #  caption: Photo by rawpixel on Unsplash
@@ -30,7 +30,6 @@ external_link: ""
 #slides: example
 ---
 
-Project funded by the Danish Centre for CyberSecurity involving ITU (Denmark) aims to study and report on the
-existing cybersecurity and privacy protection practices used in Danish companies and providing guidelines for
-securing critical infrastructures.
+The Assessment on the Status of CyberSecurity in Denmark (ASCD - pronounced as ‘asked’) is a research project conducted by the IT University of Copenhagen and the University of Southern Denmark and funded by the Danish Centre for CyberSecurity.
 
+The project aims to study and report on the existing cybersecurity and privacy protection practices used in large Danish companies and SMEs, identifying the most important challenges the developers in Denmark face in developing secure and privacy-preserving solutions, and providing guidelines for securing critical infrastructures.
