@@ -1,23 +1,33 @@
-+++
-# An example of using the custom widget to create your own homepage section.
-# To create more sections, duplicate this file and edit the values below as desired.
+---
+# An instance of the Blank widget.
+# Documentation: https://wowchemy.com/docs/page-builder/
+widget: blank
 
-date = 2016-04-20
-active = true
+# This file represents a page section.
+headless: true
 
-title = "Software"
-subtitle = ""
-widget = "custom"
+# Order that this section appears on the page.
+weight: 70
 
-# Order that this section will appear in.
-weight = 25
+# Section title
+title: Software
 
-+++
+# Section subtitle
+subtitle:
+
+# Section design
+design:
+  # Use a 1-column layout
+  columns: "2"
+  # Use a dark navy background with light text.
+  #background:
+  #  color: 'navy'
+  #  text_color_light: true
+---
 
 * [Zephyrus2](https://bitbucket.org/jacopomauro/zephyrus2): an optimal deployment configurator
 * [HyVarRec](https://github.com/HyVar/hyvar-rec): a context-aware reconfiguration for Software Product Lines
 * [SUNNY-CP](https://github.com/jacopoMauro/sunny-cp): a portfolio based constraint solver
 * [mzn2feat](https://github.com/jacopoMauro/mzn2feat): a feature extractor for MiniZinc/XCSP files
 * [XCSP-to-MiniZinc](http://www.minizinc.org/resources.html): a file converter form XCSP to MiniZinc
-
 

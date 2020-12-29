@@ -1,18 +1,29 @@
-+++
-# An example of using the custom widget to create your own homepage section.
-# To create more sections, duplicate this file and edit the values below as desired.
+---
+# An instance of the Blank widget.
+# Documentation: https://wowchemy.com/docs/page-builder/
+widget: blank
 
-date = 2019-03-15
-active = true
+# This file represents a page section.
+headless: true
 
-title = "Other links"
-subtitle = ""
-widget = "custom"
+# Order that this section appears on the page.
+weight: 80
 
-# Order that this section will appear in.
-weight = 70
+# Section title
+title: Other Links
 
-+++
+# Section subtitle
+subtitle:
+
+# Section design
+design:
+  # Use a 1-column layout
+  columns: "2"
+  # Use a dark navy background with light text.
+  #background:
+  #  color: 'navy'
+  #  text_color_light: true
+---
 
 * [Nutella: US vs Europe, experiment report](papers/nutella_experiment.pdf)
 * [Nutella: Australia vs Europe, experiment report](papers/nutella_2019.pdf)
