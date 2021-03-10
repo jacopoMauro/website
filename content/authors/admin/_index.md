@@ -76,10 +76,9 @@ highlight_name: false
 
 Jacopo Mauro is an Associate Professor at the Department of Mathematics
 and Computer Science at the University of Southern Denmark (SDU). He is active in
-the Cloud Computing, DevOps, Optimization, and Formal Methods fields. His
+the Cloud Computing, Cybersecurity, DevOps, Formal Methods, and Optimization fields. His
 research interests also include Microservices, Concurrent
-Languages, Explainable AI, and Cybersecurity. He is the main developer of
-optimizations tools and utilities, used both in academia and industry.
+Languages, and Explainable AI.
 
 Jacopo holds a Ph.D. degree in informatics from the University of Bologna. He
 has lived in four countries and worked in world renown Universities (Bologna,

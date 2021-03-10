@@ -58,5 +58,5 @@ design:
    University of Bologna - 2015
 -->
 
-Office hours: by e-mail appointment.
+**Office hours**: by e-mail appointment
 
