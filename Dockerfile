@@ -1,4 +1,4 @@
-FROM klakegg/hugo:0.79.1-ext-debian-ci AS hugo
+FROM klakegg/hugo:0.83.1-ext-debian-ci AS hugo
 
 RUN git clone --depth=1 https://github.com/jacopoMauro/website.git /src && \
     # try to test if the site can be build
