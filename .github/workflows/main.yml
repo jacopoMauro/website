@@ -33,3 +33,4 @@ jobs:
           file: Dockerfile
           platforms: linux/amd64
           tags: jacopomauro/website:latest
+          push: true
