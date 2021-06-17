@@ -4,8 +4,6 @@ on:
   push:
     branches:
       - 'master'
-    tags:
-      - 'v*.*.*'
   workflow_dispatch:
 
 jobs:
@@ -34,3 +32,4 @@ jobs:
           context: .
           file: Dockerfile
           platforms: linux/amd64
+          tags: jacopomauro/website:latest
