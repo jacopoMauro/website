@@ -19,11 +19,15 @@ To retreive the publication the [academic-admin](https://github.com/sourcethemes
 tool is used.
 
 ```
-pip3 install -U academic
+apt update
+apt install python3-pip
+pip3 install academic --upgrade
+
 cd <MY_WEBSITE_FOLDER>
 academic import --bibtex mybib.bib --normalize
 ```
 
 After this tool is run to remove the additional proceeding run the script
-/my_scripts/remove_proceedings.sh
+cd my_scripts
+bash remove_proceedings.sh
 

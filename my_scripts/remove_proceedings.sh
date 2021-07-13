@@ -10,7 +10,7 @@ for d in */ ; do
 	    # remove all lines starting with "url_pdf"
 	    sed -i '/^url_pdf/ d' "$d/index.md"
 	  else
-	    echo "Warning. Directory $d has no pdf file"
+	    echo "Warning. Directory $d has no pdf file. When added remember to remove the url_pdf line"
 	  fi
 	else
 		echo "Removing directory $d"
