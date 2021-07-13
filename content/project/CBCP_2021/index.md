@@ -1,12 +1,12 @@
 ---
-title: DICOGA
-summary: Digital Choreographies for Oil & Gas in the Arctic.
+title: CBCP
+summary: Capability-Based Command Protocol Project.
 tags:
 - current
-date: "2020-01-01T00:00:00Z"
+date: "2021-01-01T00:00:00Z"
 
 # Optional external URL for project (replaces project detail page).
-#external_link: "https://portal.findresearcher.sdu.dk/en/projects/uddannelses-og-forskningsministeriet-international-network-progra"
+#external_link: "https://"
 
 #image:
 #  caption: Photo by rawpixel on Unsplash
@@ -30,6 +30,8 @@ date: "2020-01-01T00:00:00Z"
 #slides: example
 ---
 
-International Network Program Project involving NTNU (Norway) and Equinor (Norway) to set up a collaborative
-working environment for the exploitation of choreographies, microservice, and software engineering methods
-within the field of infrastructure monitoring in the Arctic.
+Project funded by the Danish Center for CyberSecurity involving the QuasiOS startup and the Universal Robot
+company. It aims at studying and proposing secure communication protocols to interact with IoT devices and
+robots.
+
+

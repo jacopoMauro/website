@@ -1,12 +1,12 @@
 ---
-title: DICOGA
-summary: Digital Choreographies for Oil & Gas in the Arctic.
+title: Danish Cybersecurity Challenge
+summary: Danish Cybersecurity Challenge.
 tags:
-- current
-date: "2020-01-01T00:00:00Z"
+- old
+date: "2021-01-01T00:00:00Z"
 
 # Optional external URL for project (replaces project detail page).
-#external_link: "https://portal.findresearcher.sdu.dk/en/projects/uddannelses-og-forskningsministeriet-international-network-progra"
+external_link: "https://www.cybermesterskaberne.dk/"
 
 #image:
 #  caption: Photo by rawpixel on Unsplash
@@ -30,6 +30,8 @@ date: "2020-01-01T00:00:00Z"
 #slides: example
 ---
 
-International Network Program Project involving NTNU (Norway) and Equinor (Norway) to set up a collaborative
-working environment for the exploitation of choreographies, microservice, and software engineering methods
-within the field of infrastructure monitoring in the Arctic.
+Project funded by the Industriens Fond involving other 3 Danish universities (Technical University of Denmark,
+IT University of Copenhagen, Aalborg University), the Center for Cybersecurity, the Danish Ministry of Defense,
+and the Happy 42 company to promote the education of cybersecurity to the young and organize the Danish
+Cybersecurity Challenge.
+
