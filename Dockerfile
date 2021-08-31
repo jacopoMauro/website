@@ -7,4 +7,4 @@ RUN git clone --depth=1 https://github.com/jacopoMauro/website.git /src && \
 WORKDIR /src
 EXPOSE 1313
 
-CMD [ "hugo", "server", "--bind", "0.0.0.0" ]
+CMD [ "hugo", "server", "--disableLiveReload", "--bind", "0.0.0.0" ]
