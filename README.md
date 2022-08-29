@@ -23,8 +23,16 @@ apt update
 apt install python3-pip
 pip3 install academic --upgrade
 
+
 cd <MY_WEBSITE_FOLDER>
 academic import --bibtex mybib.bib --normalize
+```
+
+remember to change owner and group
+
+```
+sudo chown -R mauro *
+chgrp -R mauro *
 ```
 
 After this tool is run to remove the additional proceeding run the script
