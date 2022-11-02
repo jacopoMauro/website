@@ -25,6 +25,7 @@ design:
   #  text_color_light: true
 ---
 
+* [Innovation Prize](https://acp.sdu.dk/news/2022-08-25-Mauro-Innovation-Prize.html) from the Faculty of Natural Sciences - University of Southern Denmark
 * [Silver medal at the MiniZinc Challenge](http://www.minizinc.org/challenge.html), i.e., the international competition of constraint solvers (2020, 2019, 2018)
 * [Gold medal at the MiniZinc Challenge](http://www.minizinc.org/challenge.html) (2017, 2016, 2015)
 * [Best Algorithms Selector for runtime minimization at Open Algorithm Selection Challenge](https://www.coseal.net/open-algorithm-selection-challenge-2017-oasc/) (2017) 

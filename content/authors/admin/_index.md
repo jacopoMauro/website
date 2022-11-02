@@ -6,7 +6,7 @@ title: Jacopo Mauro
 superuser: true
 
 # Role/position/tagline
-role: Associate Professor
+role: Professor
 
 # Organizations/Affiliations to show in About widget
 organizations:
@@ -74,12 +74,12 @@ email: "mauro.jacopo@gmail.com"
 highlight_name: false
 ---
 
-Jacopo Mauro is an Associate Professor at the Department of Mathematics
+Jacopo Mauro is a Professor at the Department of Mathematics
 and Computer Science at the University of Southern Denmark (SDU). He is active in
 the Cloud Computing, Cybersecurity, DevOps, Formal Methods, and Optimization fields. His
 research interests also include Microservices, Concurrent
 Languages, and Explainable AI.
 
-Jacopo holds a Ph.D. degree in informatics from the University of Bologna. He
-has lived in four countries and worked in world renown Universities (Bologna,
+Jacopo holds a PhD degree in informatics from the University of Bologna. He
+has lived in four countries and worked in world renowned Universities (Bologna,
 Paris Diderot, Oslo, SDU) and Research Centers (INRIA).
