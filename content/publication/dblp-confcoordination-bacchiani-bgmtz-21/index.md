@@ -14,7 +14,7 @@ authors:
 tags: []
 categories: []
 date: '2021-01-01'
-lastmod: 2021-07-13T09:39:51+02:00
+lastmod: 2023-06-22T11:49:40+02:00
 featured: false
 draft: false
 
@@ -32,7 +32,7 @@ image:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: []
-publishDate: '2021-07-13T07:39:45.009277Z'
+publishDate: '2023-06-22T09:49:40.881039Z'
 publication_types:
 - '1'
 abstract: ''
@@ -41,4 +41,7 @@ publication: '*Coordination Models and Languages - 23rd IFIP WG 6.1 Internationa
   Conference on Distributed Computing Techniques, DisCoTec 2021, Valletta, Malta,
   June 14-18, 2021, Proceedings*'
 doi: 10.1007/978-3-030-78142-2_16
+links:
+- name: URL
+  url: https://doi.org/10.1007/978-3-030-78142-2_16
 ---

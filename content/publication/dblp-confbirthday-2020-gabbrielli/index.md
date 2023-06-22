@@ -11,7 +11,7 @@ authors:
 tags: []
 categories: []
 date: '2020-01-01'
-lastmod: 2021-07-13T09:39:53+02:00
+lastmod: 2023-06-22T11:49:42+02:00
 featured: false
 draft: false
 
@@ -29,10 +29,12 @@ image:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: []
-publishDate: '2021-07-13T07:39:52.837973Z'
+publishDate: '2023-06-22T09:49:42.191215Z'
 publication_types:
 - '0'
 abstract: ''
 publication: '*Schloss Dagstuhl - Leibniz-Zentrum für Informatik*'
-url_pdf: https://www.dagstuhl.de/dagpub/978-3-95977-171-9
+links:
+- name: URL
+  url: https://www.dagstuhl.de/dagpub/978-3-95977-171-9
 ---

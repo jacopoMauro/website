@@ -12,7 +12,7 @@ authors:
 tags: []
 categories: []
 date: '2020-01-01'
-lastmod: 2020-12-29T13:54:02+01:00
+lastmod: 2023-06-22T11:49:41+02:00
 featured: false
 draft: false
 
@@ -30,11 +30,14 @@ image:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: []
-publishDate: '2020-12-29T13:36:14.094842Z'
+publishDate: '2023-06-22T09:49:41.525516Z'
 publication_types:
 - '1'
 abstract: ''
 publication: "*ICSE '20: 42nd International Conference on Software Engineering, Seoul,\
   \ South Korea, 27 June - 19 July, 2020*"
 doi: 10.1145/3377811.3380372
+links:
+- name: URL
+  url: https://doi.org/10.1145/3377811.3380372
 ---

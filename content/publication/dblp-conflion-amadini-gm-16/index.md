@@ -1,17 +1,42 @@
 ---
+# Documentation: https://wowchemy.com/docs/managing-content/
+
 title: Parallelizing Constraint Solvers for Hard RCPSP Instances
-date: '2016-01-01'
-publishDate: '2020-12-29T13:36:31.730909Z'
+subtitle: ''
+summary: ''
 authors:
 - Roberto Amadini
 - Maurizio Gabbrielli
 - Jacopo Mauro
+tags: []
+categories: []
+date: '2016-01-01'
+lastmod: 2023-06-22T11:49:45+02:00
+featured: false
+draft: false
+
+# Featured image
+# To use, add an image named `featured.jpg/png` to your page's folder.
+# Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: false
+
+# Projects (optional).
+#   Associate this post with one or more of your projects.
+#   Simply enter your project's folder or file name without extension.
+#   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
+#   Otherwise, set `projects = []`.
+projects: []
+publishDate: '2023-06-22T09:49:45.019609Z'
 publication_types:
 - '1'
 abstract: ''
-featured: false
 publication: '*Learning and Intelligent Optimization - 10th International Conference,
   LION 10, Ischia, Italy, May 29 - June 1, 2016, Revised Selected Papers*'
 doi: 10.1007/978-3-319-50349-3_16
+links:
+- name: URL
+  url: https://doi.org/10.1007/978-3-319-50349-3_16
 ---
-

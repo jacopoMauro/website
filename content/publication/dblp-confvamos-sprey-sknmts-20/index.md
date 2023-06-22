@@ -15,7 +15,7 @@ authors:
 tags: []
 categories: []
 date: '2020-01-01'
-lastmod: 2020-12-29T13:54:03+01:00
+lastmod: 2023-06-22T11:49:41+02:00
 featured: false
 draft: false
 
@@ -33,11 +33,14 @@ image:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: []
-publishDate: '2020-12-29T13:36:14.736134Z'
+publishDate: '2023-06-22T09:49:41.854623Z'
 publication_types:
 - '1'
 abstract: ''
 publication: "*VaMoS '20: 14th International Working Conference on Variability Modelling\
   \ of Software-Intensive Systems, Magdeburg Germany, February 5-7, 2020*"
 doi: 10.1145/3377024.3377036
+links:
+- name: URL
+  url: https://doi.org/10.1145/3377024.3377036
 ---

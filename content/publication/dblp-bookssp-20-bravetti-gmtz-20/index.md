@@ -13,7 +13,7 @@ authors:
 tags: []
 categories: []
 date: '2020-01-01'
-lastmod: 2020-12-29T13:54:03+01:00
+lastmod: 2023-06-22T11:49:42+02:00
 featured: false
 draft: false
 
@@ -31,10 +31,13 @@ image:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: []
-publishDate: '2020-12-29T13:36:15.043527Z'
+publishDate: '2023-06-22T09:49:42.016846Z'
 publication_types:
 - '6'
 abstract: ''
 publication: '*Microservices, Science and Engineering*'
 doi: 10.1007/978-3-030-31646-4_8
+links:
+- name: URL
+  url: https://doi.org/10.1007/978-3-030-31646-4_8
 ---

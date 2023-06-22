@@ -12,7 +12,7 @@ authors:
 tags: []
 categories: []
 date: '2020-01-01'
-lastmod: 2020-12-29T13:54:02+01:00
+lastmod: 2023-06-22T11:49:41+02:00
 featured: false
 draft: false
 
@@ -30,11 +30,14 @@ image:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: []
-publishDate: '2020-12-29T13:36:14.433695Z'
+publishDate: '2023-06-22T09:49:41.692115Z'
 publication_types:
 - '1'
 abstract: ''
 publication: '*Service-Oriented Computing - 18th International Conference, ICSOC 2020,
   Dubai, United Arab Emirates, December 14-17, 2020, Proceedings*'
 doi: 10.1007/978-3-030-65310-1_29
+links:
+- name: URL
+  url: https://doi.org/10.1007/978-3-030-65310-1_29
 ---

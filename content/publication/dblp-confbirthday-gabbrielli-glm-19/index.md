@@ -12,7 +12,7 @@ authors:
 tags: []
 categories: []
 date: '2019-01-01'
-lastmod: 2020-12-29T13:54:04+01:00
+lastmod: 2023-06-22T11:49:42+02:00
 featured: false
 draft: false
 
@@ -30,7 +30,7 @@ image:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: []
-publishDate: '2020-12-29T13:36:16.226941Z'
+publishDate: '2023-06-22T09:49:42.351000Z'
 publication_types:
 - '1'
 abstract: ''
@@ -38,4 +38,7 @@ publication: '*The Art of Modelling Computational Systems: A Journey from Logic 
   Concurrency to Security and Privacy - Essays Dedicated to Catuscia Palamidessi on
   the Occasion of Her 60th Birthday*'
 doi: 10.1007/978-3-030-31175-9_8
+links:
+- name: URL
+  url: https://doi.org/10.1007/978-3-030-31175-9_8
 ---

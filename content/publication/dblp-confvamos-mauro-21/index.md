@@ -9,7 +9,7 @@ authors:
 tags: []
 categories: []
 date: '2021-01-01'
-lastmod: 2021-07-13T09:39:51+02:00
+lastmod: 2023-06-22T11:49:41+02:00
 featured: false
 draft: false
 
@@ -27,7 +27,7 @@ image:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: []
-publishDate: '2021-07-13T07:39:51.735947Z'
+publishDate: '2023-06-22T09:49:41.198534Z'
 publication_types:
 - '1'
 abstract: ''
@@ -35,4 +35,7 @@ publication: "*VaMoS'21: 15th International Working Conference on Variability Mo
   \ of Software-Intensive Systems, Virtual Event / Krems, Austria, February 9-11,\
   \ 2021*"
 doi: 10.1145/3442391.3442405
+links:
+- name: URL
+  url: https://doi.org/10.1145/3442391.3442405
 ---
