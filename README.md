@@ -35,7 +35,7 @@ chgrp -R mauro *
 
 After this tool is run to remove the additional proceeding run the script
 cd my_scripts
-bash remove_proceedings.sh
+python3 remove_proceedings.py
 
 
 
