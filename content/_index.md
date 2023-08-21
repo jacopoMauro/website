@@ -120,6 +120,7 @@ sections:
       #   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mi diam, venenatis ut magna et, vehicula efficitur enim.
       # Contact (add or remove contact options as necessary)
       email: mauro.jacopo@gmail.com
+      pemail: mauro@imada.sdu.dk
       phone: +45 65 50 25 72
       # appointment_url: 'https://tinyurl.com/y9rz4lyb'
       address:
