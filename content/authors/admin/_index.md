@@ -90,7 +90,7 @@ the Cloud Computing, Cybersecurity, DevOps, Formal Methods, and Optimization fie
 research interests also include Microservices, Concurrent
 Languages, and Explainable AI.
 
-Jacopo holds a PhD degree in informatics from the University of Bologna. He has lived in four countries and worked in world renowned Universities (Bologna,
+Jacopo holds a PhD degree in informatics from the University of Bologna. He has lived in four countries and worked in world-renowned Universities (Bologna,
 Paris Diderot, Oslo, SDU) and Research Centers (INRIA).
 
 {style="text-align: justify;"}

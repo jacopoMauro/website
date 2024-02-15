@@ -7,26 +7,22 @@ docker run --rm -it -v $(pwd):/src -p 1313:1313 klakegg/hugo:ext-debian-ci hugo
 ```
 
 or to get a shell
-
-```
-docker run --rm -it -v $(pwd):/src -p 1313:1313 klakegg/hugo:ext-debian-ci /bin/bash
-```
-
-To retreive the publication the [academic-admin](https://github.com/sourcethemes/academic-admin)
+To retrieve the publication the [academic-admin](https://github.com/sourcethemes/academic-admin)
 tool is used.
 
 ```
+docker run -v `pwd`:/mydir --rm -it --entrypoint /bin/bash python
+
 apt update
 apt install python3-pip
 pip3 install academic --upgrade
 
-
 cd <MY_WEBSITE_FOLDER>
-academic import --bibtex mybib.bib --normalize
+academic import --bibtex --normalize mybib.bib content/publication
 ```
 
-academic can be install locally on ~/.local/bin/academic
-remember to change owner and group if exectued inside docker
+academic can be installed locally on ~/.local/bin/academic
+remember to change owner and group if executed inside docker
 
 ```
 sudo chown -R mauro *

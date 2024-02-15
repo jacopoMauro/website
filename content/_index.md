@@ -125,14 +125,9 @@ sections:
       # appointment_url: 'https://tinyurl.com/y9rz4lyb'
       address:
         street: |-
-          Department of Mathematics and Computer Science,<br>
-          University of Southern Denmark,<br>
+          Department of Mathematics and Computer Science<br>
+          University of Southern Denmark<br>
           Campusvej 55, Odense M, 5230, Denmark
-        # city: Odense M
-        # region: CA
-        # postcode: '5230'
-        # country: Denmark
-        # country_code: US
       office: 
       directions: Office number Ø13-604a-2. You can locate it using the <a href="https://tinyurl.com/y9rz4lyb">SDU online map</a>.
       office_hours:
