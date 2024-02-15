@@ -24,7 +24,7 @@ publishDate: '2024-02-15T10:29:20.561057Z'
 # Publication type.
 # A single CSL publication type but formatted as a YAML list (for Hugo requirements).
 publication_types:
-- article-journal
+- '2'
 
 # Publication name and optional abbreviated publication name.
 publication: '*IT Prof.*'
@@ -74,5 +74,3 @@ links:
 - name: URL
   url: https://doi.org/10.1109/MITP.2023.3333071
 ---
-
-Add the **full text** or **supplementary notes** for the publication here using Markdown formatting.

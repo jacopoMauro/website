@@ -24,7 +24,7 @@ publishDate: '2024-02-15T10:29:20.546678Z'
 # Publication type.
 # A single CSL publication type but formatted as a YAML list (for Hugo requirements).
 publication_types:
-- chapter
+- '0'
 
 # Publication name and optional abbreviated publication name.
 publication: '*Active Object Languages: Current Research Trends*'
@@ -74,5 +74,3 @@ links:
 - name: URL
   url: https://doi.org/10.1007/978-3-031-51060-1_7
 ---
-
-Add the **full text** or **supplementary notes** for the publication here using Markdown formatting.

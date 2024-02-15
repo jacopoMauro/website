@@ -25,7 +25,7 @@ publishDate: '2024-02-15T10:29:20.565248Z'
 # Publication type.
 # A single CSL publication type but formatted as a YAML list (for Hugo requirements).
 publication_types:
-- paper-conference
+- '1'
 
 # Publication name and optional abbreviated publication name.
 publication: '*Proceedings of the First Workshop on Trends in Configurable Systems
@@ -76,5 +76,3 @@ links:
 - name: URL
   url: https://doi.org/10.4204/EPTCS.392.3
 ---
-
-Add the **full text** or **supplementary notes** for the publication here using Markdown formatting.
