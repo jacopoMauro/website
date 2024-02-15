@@ -33,6 +33,11 @@ After this tool is run to remove the additional proceeding run the script
 cd my_scripts
 python3 remove_proceedings.py
 
+Note that they introduce a breaking change in version v5.9.0 to define the publication type.
+The current version 5.7 does not support the new types (strings instead of ints).
+To avoid doing a big update if the publications are few consider changing the pub manually
+after using the academic tool.
+
 
 
 # [Hugo Academic Theme](https://github.com/wowchemy/starter-hugo-academic)
