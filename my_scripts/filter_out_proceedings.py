@@ -1,35 +1,55 @@
-import re
+import bibtexparser
+from bibtexparser.bwriter import BibTexWriter
+from bibtexparser.bibdatabase import BibDatabase
+
+def filter_bibtex_entries(bib_database, editor_name):
+    filtered = []
+    for entry in bib_database.entries:
+        entry_type = entry.get('type', '').lower()  # In newer versions of bibtexparser, the key is "ENTRYTYPE".
+        if not entry_type:
+            # Some old versions store the type under 'ENTRYTYPE', so we might need:
+            entry_type = entry.get('ENTRYTYPE', '').lower()
+
+        if entry_type == 'proceedings':
+            # Keep only if 'editor' contains the desired name
+            editor_field = entry.get('editor', '')
+            if editor_name in editor_field:
+                filtered.append(entry)
+
+        elif entry_type == 'book':
+            # Keep only if 'author' contains the desired name
+            author_field = entry.get('author', '')
+            if editor_name in author_field:
+                filtered.append(entry)
+
+        else:
+            # For any other entry types, keep them as is
+            filtered.append(entry)
+    return filtered
 
 def filter_bib_file(input_file, output_file, editor_name):
-    with open(input_file, 'r', encoding='utf-8') as file:
-        bib_data = file.read()
+    # 1. Parse the .bib file
+    with open(input_file, 'r', encoding='utf-8') as bibtex_file:
+        bib_database = bibtexparser.load(bibtex_file)
+    
+    # 2. Filter entries
+    filtered_entries = filter_bibtex_entries(bib_database, editor_name)
 
-    # Regular expression to match individual bibitems
-    bibitem_pattern = re.compile(r'@(\w+){(.*?),\n(.*?)}\n', re.DOTALL)
+    # 3. Put filtered entries into a new database
+    new_db = BibDatabase()
+    new_db.entries = filtered_entries
 
-    # Extract bibitems
-    bibitems = bibitem_pattern.findall(bib_data)
-
-    # Filter bibitems
-    filtered_bibitems = []
-    for bibitem in bibitems:
-        entry_type, citation_key, entry_body = bibitem
-        if entry_type.lower() == 'proceedings':
-            if re.search(r'editor\s*=\s*[{"]?Jacopo Mauro[}"]?', entry_body):
-                filtered_bibitems.append(bibitem)
-        if entry_type.lower() == 'book':
-            if re.search(r'author\s*=\s*[{"]?Jacopo Mauro[}"]?', entry_body):
-                filtered_bibitems.append(bibitem)
-        else:
-            filtered_bibitems.append(bibitem)
-
-    # Write filtered bibitems to output file
-    with open(output_file, 'w', encoding='utf-8') as file:
-        for entry_type, citation_key, entry_body in filtered_bibitems:
-            file.write(f'@{entry_type}{{{citation_key},\n{entry_body}}}\n\n')
+    # 4. Write the filtered database back to a .bib file
+    writer = BibTexWriter()
+    # You can customize writer settings, e.g.:
+    # writer.indent = '  '
+    # writer.comma_first = True
+    with open(output_file, 'w', encoding='utf-8') as bibtex_out:
+        bibtex_out.write(writer.write(new_db))
 
 # Usage
-input_file = '../mybib.bib'
-output_file = '../filteredbib.bib'
-editor_name = 'Jacopo Mauro'
-filter_bib_file(input_file, output_file, editor_name)
+if __name__ == "__main__":
+    input_file = '../mybib.bib'
+    output_file = '../filteredbib.bib'
+    editor_name = 'Jacopo Mauro'
+    filter_bib_file(input_file, output_file, editor_name)

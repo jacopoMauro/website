@@ -3,7 +3,7 @@
 To run the website locally run
 
 ```
-docker run --rm -it -v $(pwd):/src -p 1313:1313 klakegg/hugo:ext-debian-ci hugo
+docker run --rm -it -v $(pwd):/src -p 1313:1313 klakegg/hugo:ext-debian-ci hugo serve
 ```
 
 or to get a shell
