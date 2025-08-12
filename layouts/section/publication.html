@@ -43,6 +43,7 @@
             <option value="*">{{ i18n "publication_type" }}</option>
 
             {{/* Build the filter list, normalizing taxonomy keys to indices */}}
+            {{ $.Scratch.Set "seen_pub_idx" (dict) }}
             {{ range $key, $_ := site.Taxonomies.publication_types }}
               {{/* Normalize $key (may be "2", 2, "article-journal", or label text) to an integer index */}}
               {{ $idx := 0 }}
@@ -64,8 +65,12 @@
                 {{ end }}
               {{ end }}
 
-              {{ if and (ge $idx 0) (lt $idx (len $pub_types)) }}
+              {{ $seen := $.Scratch.Get "seen_pub_idx" }}
+              {{ if and (ge $idx 0) (lt $idx (len $pub_types)) (not (index $seen (printf "%d" $idx))) }}
                 <option value=".pubtype-{{ $idx }}">{{ index $pub_types $idx }}</option>
+                {{/* mark as seen */}}
+                {{ $seen = merge $seen (dict (printf "%d" $idx) true) }}
+                {{ $.Scratch.Set "seen_pub_idx" $seen }}
               {{ end }}
             {{ end }}
           </select>
