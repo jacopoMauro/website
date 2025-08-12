@@ -1,8 +1,8 @@
 ---
 title: Danish Cybersecurity Challenge 2022-24
-summary: Danish Cybersecurity Challenge.
+summary:
 tags:
-- recent
+- old
 date: "2022-01-01T00:00:00Z"
 
 # Optional external URL for project (replaces project detail page).

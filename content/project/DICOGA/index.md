@@ -2,7 +2,7 @@
 title: DICOGA
 summary: Digital Choreographies for Oil & Gas in the Arctic.
 tags:
-- recent
+- old
 date: "2020-01-01T00:00:00Z"
 
 # Optional external URL for project (replaces project detail page).

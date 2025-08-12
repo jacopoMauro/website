@@ -2,7 +2,7 @@
 title: ASCD
 summary: Assessment on the Status of CyberSecurity in Denmark.
 tags:
-- recent
+- old
 date: "2020-01-01T00:00:00Z"
 
 # Optional external URL for project (replaces project detail page).

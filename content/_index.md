@@ -60,10 +60,14 @@ sections:
       title: Teaching
       subtitle: ''
       text: |-
-        **Current courses**
+        **Last courses**
+        * [Introduction to Artificial Intelligence](https://odin.sdu.dk/sitecore/index.php?a=searchfagbesk&internkode=ai501&lang=en),
+          University of Southern Denmark, Spring 2025
+        * [Microservices & Dev(Sec)Ops](https://odin.sdu.dk/sitecore/index.php?a=fagbesk&id=175421&lang=en&listid=),
+          University of Southern Denmark, Autumn 2024
+
+        **Past courses**   
         * [Programming Languages](https://github.com/jacopoMauro/dm552),
-          University of Southern Denmark
-        * [Microservices & Dev(Sec)Ops](https://github.com/jacopoMauro/dm874),
           University of Southern Denmark
 
         **Topics available for Master Thesis**

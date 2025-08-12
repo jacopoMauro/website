@@ -1,12 +1,12 @@
 ---
-title: Danish Cybersecurity Challenge
+title: Parallel Portfolio of Parallel Solvers (P3)
 summary:
 tags:
-- old
-date: "2021-01-01T00:00:00Z"
+- recent
+date: "2025-01-01T00:00:00Z"
 
 # Optional external URL for project (replaces project detail page).
-external_link: "https://www.cybermesterskaberne.dk/"
+external_link: "https://www.sdu.dk/da/om-sdu/fakulteterne/naturvidenskab/nyheder-2024/dff-2024-bevillinger"
 
 #image:
 #  caption: Photo by rawpixel on Unsplash
@@ -30,8 +30,4 @@ external_link: "https://www.cybermesterskaberne.dk/"
 #slides: example
 ---
 
-Project funded by the Industriens Fond involving other 3 Danish universities (Technical University of Denmark,
-IT University of Copenhagen, Aalborg University), the Center for Cybersecurity, the Danish Ministry of Defense,
-and the Happy 42 company to promote the education of cybersecurity to the young and organize the Danish
-Cybersecurity Challenge.
-
+The Parallel Portfolio of Parallel Solvers (P3) project, funded by the Independent Research Fund Denmark (Danmarks Frie Forskningsfond, DFF) aims to advance the state of the art in solving complex combinatorial optimization problems by combining the power of parallelism in portfolio solvers.

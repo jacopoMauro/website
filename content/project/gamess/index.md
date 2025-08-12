@@ -2,7 +2,7 @@
 title: GAMESS
 summary: GAMification and Education for Secure Software (GAMESS).
 tags:
-  - recent
+  - old
 date: '2023-01-01T00:00:00Z'
 
 # Optional external URL for project (replaces project detail page).
