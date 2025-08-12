@@ -1,0 +1,106 @@
+{{- define "main" -}}
+{{/* Publication section listing with safe normalization of publication_types */}}
+
+{{ $pub_types := partial "functions/get_pub_types" . }}
+
+{{/* Collect all publication pages under this section */}}
+{{ $pages := .Pages }}
+
+<div class="pub">
+
+  {{ partial "page_header.html" . }}
+
+  <div class="article-container">
+
+    {{/* Optional: lead content for the section page */}}
+    {{ with .Content }}
+      <div class="article-style space-below">{{ . }}</div>
+    {{ end }}
+
+    {{/* We’ll group and render by publication type index (1..N-1), skipping 0 = Uncategorized at the end */}}
+    {{ $max := sub (len $pub_types) 1 }}
+
+    {{/* Helper: function to compute a page's pub index via the partial */}}
+    {{/* We can’t declare functions, so we inline per page below */}}
+
+    {{/* Render each non-uncategorized type section in order */}}
+    {{ range $t := seq 1 $max }}
+      {{ $typeIdx := $t }}
+      {{/* Filter pages that belong to this type */}}
+      {{ $group := slice }}
+      {{ range $p := $pages }}
+        {{ $raw_list := $p.Params.publication_types | default (slice) }}
+        {{ $raw := "" }}
+        {{ if gt (len $raw_list) 0 }}{{ $raw = index $raw_list 0 }}{{ end }}
+        {{ $idx := partial "functions/pub_type_index" (dict "ctx" $p "value" $raw) }}
+        {{ if eq $idx $typeIdx }}
+          {{ $group = $group | append $p }}
+        {{ end }}
+      {{ end }}
+
+      {{ if gt (len $group) 0 }}
+        <div id="{{ printf "%d" $typeIdx | anchorize }}" class="pub-type-group space-below">
+          <h2 class="pub-type-title">{{ index $pub_types $typeIdx }}</h2>
+          <div class="pub-list">
+            {{ range $g := ($group.ByDate.Reverse) }}
+              <div class="pub-item space-below">
+                <h3 class="pub-item-title">
+                  <a href="{{ $g.RelPermalink }}">{{ with $g.Params.title }}{{ . }}{{ else }}{{ $g.Title }}{{ end }}</a>
+                </h3>
+
+                {{ with $g.Params.publication }}
+                  <div class="pub-venue">{{ . | markdownify }}</div>
+                {{ end }}
+
+                {{ with $g.Params.abstract }}
+                  <div class="pub-abstract">{{ . | markdownify }}</div>
+                {{ end }}
+
+                {{/* You can include more fields (authors, year, etc.) here as needed */}}
+              </div>
+            {{ end }}
+          </div>
+        </div>
+      {{ end }}
+    {{ end }}
+
+    {{/* Finally, show Uncategorized (type 0) if any */}}
+    {{ $uncat := slice }}
+    {{ range $p := $pages }}
+      {{ $raw_list := $p.Params.publication_types | default (slice) }}
+      {{ $raw := "" }}
+      {{ if gt (len $raw_list) 0 }}{{ $raw = index $raw_list 0 }}{{ end }}
+      {{ $idx := partial "functions/pub_type_index" (dict "ctx" $p "value" $raw) }}
+      {{ if eq $idx 0 }}
+        {{ $uncat = $uncat | append $p }}
+      {{ end }}
+    {{ end }}
+
+    {{ if gt (len $uncat) 0 }}
+      <div id="{{ printf "%d" 0 | anchorize }}" class="pub-type-group space-below">
+        <h2 class="pub-type-title">{{ index $pub_types 0 }}</h2>
+        <div class="pub-list">
+          {{ range $g := ($uncat.ByDate.Reverse) }}
+            <div class="pub-item space-below">
+              <h3 class="pub-item-title">
+                <a href="{{ $g.RelPermalink }}">{{ with $g.Params.title }}{{ . }}{{ else }}{{ $g.Title }}{{ end }}</a>
+              </h3>
+
+              {{ with $g.Params.publication }}
+                <div class="pub-venue">{{ . | markdownify }}</div>
+              {{ end }}
+
+              {{ with $g.Params.abstract }}
+                <div class="pub-abstract">{{ . | markdownify }}</div>
+              {{ end }}
+            </div>
+          {{ end }}
+        </div>
+      </div>
+    {{ end }}
+
+    {{ partial "page_footer" . }}
+
+  </div>
+</div>
+{{- end -}}

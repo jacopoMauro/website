@@ -1,0 +1,127 @@
+{{- define "main" -}}
+
+{{/* Require Isotope */}}
+{{ $.Page.Store.Set "has_isotope" true }}
+
+{{ partial "page_header.html" . }}
+
+<div class="universal-wrapper">
+  <div class="row">
+    <div class="col-lg-12">
+
+      {{ with .Content }}
+      <div class="article-style">{{ . }}</div>
+      {{ end }}
+
+      {{/* Array of distinct years. */}}
+      {{ range .Pages.ByDate.Reverse }}
+        {{ $year := print (.Date.Format "2006") }}
+        {{ $.Scratch.SetInMap "years" $year $year }}
+      {{ end }}
+
+      {{/* Setup: pub type labels and CSL→index map */}}
+      {{ $pub_types := partial "functions/get_pub_types" $ }}
+      {{/* 0 Uncategorized, 1 Conf, 2 Journal, 3 Preprint, 4 Report, 5 Book, 6 Chapter, 7 Thesis, 8 Patent */}}
+      {{ $csl2idx := dict
+        "paper-conference" 1
+        "article-journal"  2
+        "manuscript"       3
+        "report"           4
+        "book"             5
+        "chapter"          6
+        "thesis"           7
+        "patent"           8
+      }}
+
+      <div class="form-row mb-4">
+        <div class="col-auto">
+          <input type="search" class="filter-search form-control form-control-sm" placeholder="{{ i18n "search_placeholder" }}" autocapitalize="off"
+          autocomplete="off" autocorrect="off" role="textbox" spellcheck="false">
+        </div>
+        <div class="col-auto">
+          <select class="pub-filters pubtype-select form-control form-control-sm" data-filter-group="pubtype">
+            <option value="*">{{ i18n "publication_type" }}</option>
+
+            {{/* Build the filter list, normalizing taxonomy keys to indices */}}
+            {{ range $key, $_ := site.Taxonomies.publication_types }}
+              {{/* Normalize $key (may be "2", 2, "article-journal", or label text) to an integer index */}}
+              {{ $idx := 0 }}
+              {{ $s := printf "%v" $key }}
+              {{ $isnum := findRE "^[0-9]+$" $s }}
+              {{ if gt (len $isnum) 0 }}
+                {{ $idx = (int $s) }}
+              {{ else }}
+                {{ with (index $csl2idx (lower $s)) }}
+                  {{ $idx = . }}
+                {{ else }}
+                  {{/* fallback: try to match human label (case-insensitive) */}}
+                  {{ $ls := lower $s }}
+                  {{ $found := -1 }}
+                  {{ range $i, $label := $pub_types }}
+                    {{ if eq (lower $label) $ls }}{{ $found = $i }}{{ end }}
+                  {{ end }}
+                  {{ if ge $found 0 }}{{ $idx = $found }}{{ else }}{{ $idx = 0 }}{{ end }}
+                {{ end }}
+              {{ end }}
+
+              {{ if and (ge $idx 0) (lt $idx (len $pub_types)) }}
+                <option value=".pubtype-{{ $idx }}">{{ index $pub_types $idx }}</option>
+              {{ end }}
+            {{ end }}
+          </select>
+        </div>
+        <div class="col-auto">
+          <select class="pub-filters form-control form-control-sm" data-filter-group="year">
+            <option value="*">{{ i18n "date" }}</option>
+            {{ $years_sorted := $.Scratch.GetSortedMapValues "years" }}
+            {{ if $years_sorted }}
+            {{ range $year := sort $years_sorted "" "desc" }}
+            <option value=".year-{{ $year }}">
+              {{ $year }}
+            </option>
+            {{ end }}
+            {{ end }}
+          </select>
+        </div>
+      </div>
+
+      <div id="container-publications">
+        {{ range $index, $item := .Pages.ByDate.Reverse }}
+
+          {{/* Normalize each item's pubtype to an int for the CSS class/filtering */}}
+          {{ $ptype := 0 }}
+          {{ with .Params.publication_types }}
+            {{ $first := index . 0 }}
+            {{ $s := printf "%v" $first }}
+            {{ $isnum := findRE "^[0-9]+$" $s }}
+            {{ if gt (len $isnum) 0 }}
+              {{ $ptype = (int $s) }}
+            {{ else }}
+              {{ with (index $csl2idx (lower $s)) }}
+                {{ $ptype = . }}
+              {{ else }}
+                {{ $ls := lower $s }}
+                {{ $found := -1 }}
+                {{ range $i, $label := $pub_types }}
+                  {{ if eq (lower $label) $ls }}{{ $found = $i }}{{ end }}
+                {{ end }}
+                {{ if ge $found 0 }}{{ $ptype = $found }}{{ else }}{{ $ptype = 0 }}{{ end }}
+              {{ end }}
+            {{ end }}
+          {{ end }}
+          {{ if or (lt $ptype 0) (ge $ptype (len $pub_types)) }}
+            {{ $ptype = 0 }}
+          {{ end }}
+
+          <div class="grid-sizer col-lg-12 isotope-item pubtype-{{ $ptype }} year-{{ .Date.Format "2006" }}">
+            {{ partial "functions/render_view" (dict "page" $ "item" . "view" ($.Params.view | default "compact") "index" $index) }}
+          </div>
+
+        {{ end }}
+      </div>
+
+    </div>
+  </div>
+</div>
+
+{{- end -}}

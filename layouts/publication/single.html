@@ -1,0 +1,69 @@
+{{- define "main" -}}
+{{ $pub_types := partial "functions/get_pub_types" $ }}
+
+{{/* Read first entry from front matter (can be "2", 2, "article-journal", "Journal article", etc.) */}}
+{{ $raw_list := .Params.publication_types | default (slice) }}
+{{ $raw := "" }}
+{{ if gt (len $raw_list) 0 }}{{ $raw = index $raw_list 0 }}{{ end }}
+
+{{/* Normalize to a numeric publication-type index using our helper partial */}}
+{{ $pub_type := partial "functions/pub_type_index" (dict "ctx" . "value" $raw) }}
+
+{{/* Validate range */}}
+{{ if or (lt $pub_type 0) (ge $pub_type (len $pub_types)) }}
+  {{ warnf "Unknown publication type in %s (got %v)" .File.Path $raw }}
+  {{ $pub_type = 0 }}
+{{ end }}
+
+<div class="pub">
+
+  {{ partial "page_header.html" . }}
+
+  <div class="article-container">
+
+    {{ if .Params.abstract }}
+    <h3>{{ i18n "abstract" }}</h3>
+    <p class="pub-abstract">{{ .Params.abstract | markdownify }}</p>
+    {{ end }}
+
+    {{ if ne $pub_type 0 }}
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-12 col-md-3 pub-row-heading">{{ i18n "publication_type" }}</div>
+          <div class="col-12 col-md-9">
+            <a href="{{ (site.GetPage "section" "publication").RelPermalink }}#{{ printf "%d" $pub_type | anchorize }}">
+              {{ index $pub_types $pub_type }}
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <div class="d-md-none space-below"></div>
+    {{ end }}
+
+    {{ if .Params.publication }}
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-12 col-md-3 pub-row-heading">{{ i18n "publication" }}</div>
+          <div class="col-12 col-md-9">{{ .Params.publication | markdownify }}</div>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <div class="d-md-none space-below"></div>
+    {{ end }}
+
+    <div class="space-below"></div>
+
+    <div class="article-style">{{ .Content }}</div>
+
+    {{ partial "page_footer" . }}
+
+  </div>
+</div>
+{{- end -}}

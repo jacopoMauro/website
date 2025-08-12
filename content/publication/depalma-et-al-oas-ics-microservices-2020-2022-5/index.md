@@ -77,4 +77,4 @@ links:
     https://drops-dev.dagstuhl.de/entities/document/10.4230/OASIcs.Microservices.2020-2022.5
 ---
 
-Add the **full text** or **supplementary notes** for the publication here using Markdown formatting.
+

@@ -1,0 +1,65 @@
+{{/* Normalize any incoming value to a Wowchemy publication-type index (int).
+
+   Usage:
+     {{ $idx := partial "functions/pub_type_index" (dict "ctx" . "value" $rawOrIndex) }}
+
+   Accepted inputs:
+     - 2          (number)
+     - "2"        (numeric string)
+     - "article-journal"   (CSL type)
+     - "Journal article"   (human label from get_pub_types)
+
+   Returns:
+     - integer index (0..len(pub_types)-1), default 0 if unknown.
+
+*/}}
+
+{{ $ctx := .ctx }}
+{{ $value := .value }}
+
+{{/* Load labels from your existing helper */}}
+{{ $pub_types := partial "functions/get_pub_types" $ctx }}
+
+{{/* Map CSL item types to Wowchemy indices (v5 defaults):
+     0 Uncategorized, 1 Conference, 2 Journal, 3 Preprint, 4 Report,
+     5 Book, 6 Chapter, 7 Thesis, 8 Patent */}}
+{{ $csl2idx := dict
+  "paper-conference" 1
+  "article-journal"  2
+  "manuscript"       3
+  "report"           4
+  "book"             5
+  "chapter"          6
+  "thesis"           7
+  "patent"           8
+}}
+
+{{/* Start normalized value */}}
+{{ $norm := 0 }}
+
+{{ if $value }}
+  {{ $raw := printf "%v" $value }}
+  {{/* If it's digits (optionally with spaces / minus), cast safely */}}
+  {{ if gt (len (findRE `^\s*-?\d+\s*$` $raw)) 0 }}
+    {{ $norm = int (trim $raw " ") }}
+  {{ else }}
+    {{/* Try CSL string like "article-journal" */}}
+    {{ with (index $csl2idx (lower $raw)) }}
+      {{ $norm = . }}
+    {{ else }}
+      {{/* Try human label like "Journal article" */}}
+      {{ $lower := lower $raw }}
+      {{ range $i, $label := $pub_types }}
+        {{ if eq (lower $label) $lower }}{{ $norm = $i }}{{ end }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{/* Validate range */}}
+{{ if or (lt $norm 0) (ge $norm (len $pub_types)) }}
+  {{/* keep quiet in partial; callers may warn if they like */}}
+  {{ $norm = 0 }}
+{{ end }}
+
+{{ return $norm }}

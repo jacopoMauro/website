@@ -1,38 +1,37 @@
 ---
-title: 'Choreography-Defined Networks: A Case Study on DoS Mitigation'
+title: Affinity-aware Serverless Function Scheduling
 
 # Authors
 # A YAML list of author names
 # If you created a profile for a user (e.g. the default `admin` user at `content/authors/admin/`), 
 # write the username (folder name) here, and it will be replaced with their full name and linked to their profile.
 authors:
+- Giuseppe De Palma
 - Saverio Giallorenzo
 - Jacopo Mauro
-- Andrea Melis
-- Fabrizio Montesi
-- Marco Peressotti
-- Marco Prandini
+- Matteo Trentin
+- Gianluigi Zavattaro
 
 # Author notes (such as 'Equal Contribution')
 # A YAML list of notes for each author in the above `authors` list
 author_notes: []
 
-date: '2024-01-01'
+date: '2025-01-01'
 
 # Date to publish webpage (NOT necessarily Bibtex publication's date).
-publishDate: '2025-02-07T13:06:36.408944Z'
+publishDate: '2025-08-12T08:59:17.074159Z'
 
 # Publication type.
 # A single CSL publication type but formatted as a YAML list (for Hugo requirements).
 publication_types:
-- '1'
+- paper-conference
 
 # Publication name and optional abbreviated publication name.
-publication: '*Service-Oriented Computing - 22nd International Conference, ICSOC 2024,
-  Tunis, Tunisia, December 3-6, 2024, Proceedings, Part II*'
+publication: '*22nd IEEE International Conference on Software Architecture, ICSA 2025,
+  Odense, Denmark, March 31 - April 4, 2025*'
 publication_short: ''
 
-doi: 10.1007/978-981-96-0808-9_18
+doi: 10.1109/ICSA65012.2025.00015
 
 abstract: ''
 
@@ -74,7 +73,7 @@ image:
 projects: []
 links:
 - name: URL
-  url: https://doi.org/10.1007/978-981-96-0808-9_18
+  url: https://doi.org/10.1109/ICSA65012.2025.00015
 ---
 
 
